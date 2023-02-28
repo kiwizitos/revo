@@ -1,0 +1,33 @@
+---
+import ColorContainer from '../components/container/ColorContainer.astro'
+import Header from '../components/Header'
+import Layout from '../layouts/Layout.astro'
+
+const colore = [
+  {
+    colorImage: '/images/colors/darkBlue.svg',
+    name: '#373A50',
+  },
+  {
+    colorImage: '/images/colors/blue.svg',
+    name: '#9297CB',
+  },
+  {
+    colorImage: '/images/colors/orange.svg',
+    name: '#EE7036',
+  },
+  {
+    colorImage: '/images/colors/yellow.svg',
+    name: '#F7CB9A',
+  },
+  {
+    colorImage: '/images/colors/salmon.svg',
+    name: '#F6C1A7',
+  },
+]
+---
+
+<Layout title='Identidade'>
+  <Header client:load />
+  {colore.map((item) => <ColorContainer name={item.name} />)}
+</Layout>

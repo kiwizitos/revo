@@ -19,17 +19,38 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: Nunito, system-ui, sans-serif;
 		background-color: #F6F6F6;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+
+	h2 {
+		font-family: Montserrat;
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/NunitoSans-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Sao Torpes';
+    src: url('/fonts/Sao Torpes.otf');
+  }
+
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Bold.ttf');
+  }
 </style>
