@@ -1,15 +1,26 @@
 ---
-import Card from '../Card.astro'
-const {colorImage, name} = Astro.props;
+import Card from "../Card.astro";
+const { name, description, title } = Astro.props;
 ---
 
 <Card>
-  <div class="flex justify-self-center justify-between items-center gap-5 sm:w-[150px]">
+  <div
+    class="flex justify-self-center justify-between items-center gap-5 min-h-[120px] self-center"
+  >
     <svg class="w-10 h-10 m-2">
-      <circle cx="5" cy="5" r="4" fill={name} stroke="#373A50" stroke-width="2"/>
+      <circle
+        cx="20"
+        cy="20"
+        r="15"
+        fill={name}
+        stroke="#373A50"
+        stroke-width="2"></circle>
     </svg>
+    <div class="w-11/12">
+      <h2>{title}</h2>
     <p>
-      {name}
+      {description}
     </p>
+    </div>
   </div>
 </Card>

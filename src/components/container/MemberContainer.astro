@@ -1,13 +1,18 @@
 ---
 import Card from "../Card.astro";
 
-const { name, role, image, url } = Astro.props
+const { name, role, image, url } = Astro.props;
 ---
 
-<a href={url} target="_blank" rel="noopener noreferrer" class="hover:scale-105 transition-all">
-		<Card>
-			<img src={image} class='w-40'/>
-			<h2 class='text-black'>{name}</h2>
-			<p class='text-darkBlue'>{role}</p>
-		</Card>
+<a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="hover:scale-105 transition-all"
+>
+  <Card>
+    <img src={image} class="w-40" />
+    <h2 class="text-black">{name}</h2>
+    <p class="text-darkBlue">{role}</p>
+  </Card>
 </a>

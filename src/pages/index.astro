@@ -1,32 +1,43 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Header from '../components/Header'
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header";
 ---
 
-<Layout title='Revo'>
+<Layout title="Revo">
   <Header client:load />
-  <main class='container p-8'>
-    <p class='font-Montserrat text-4xl'>Dê vida aos seus projetos com a REVO</p>
-    <p class='font-Nunito'>Subtítulo</p>
+  <main class="container p-8">
+    <p class="font-Montserrat text-4xl">Bem-vindo à REVO</p>
     <p>
-      Um paragráfo sem estilo que deve estar com a fonte Nunito automaticamente
-      porque eu nao aguento mais porra
+      Nós somos uma consultoria de tecnologia especializada em desenvolvimento
+      de aplicativos móveis. Nosso objetivo é revolucionar o mercado de
+      aplicativos, trazendo soluções personalizadas para cada cliente.
+    </p>
+    <p>
+      Com uma equipe altamente qualificada e atualizada com as tecnologias mais
+      recentes, estamos prontos para criar aplicativos modernos e eficientes que
+      atendam às suas necessidades. Além disso, nossa identidade visual é
+      moderna e minimalista, refletindo a nossa abordagem inovadora para o
+      desenvolvimento de aplicativos.
+    </p>
+    <p>
+      Entre em contato conosco e vamos trabalhar juntos para criar o aplicativo
+      móvel que você precisa.
     </p>
   </main>
 </Layout>
 
 <style is:global>
   @font-face {
-    font-family: 'Nunito';
-    src: url('/fonts/NunitoSans-Regular.ttf');
+    font-family: "Nunito";
+    src: url("/fonts/NunitoSans-Regular.ttf");
   }
   @font-face {
-    font-family: 'Sao Torpes';
-    src: url('/fonts/Sao Torpes.otf');
+    font-family: "Sao Torpes";
+    src: url("/fonts/Sao Torpes.otf");
   }
 
   @font-face {
-    font-family: 'Montserrat';
-    src: url('/fonts/Montserrat-Bold.ttf');
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Bold.ttf");
   }
 </style>

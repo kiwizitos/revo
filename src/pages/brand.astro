@@ -1,33 +1,77 @@
 ---
-import ColorContainer from '../components/container/ColorContainer.astro'
-import Header from '../components/Header'
-import Layout from '../layouts/Layout.astro'
+import Card from "../components/Card.astro";
+import ColorContainer from "../components/container/ColorContainer.astro";
+import Header from "../components/Header";
+import Layout from "../layouts/Layout.astro";
 
 const colore = [
   {
-    colorImage: '/images/colors/darkBlue.svg',
-    name: '#373A50',
+    name: "#9297CB",
+    title: "Azul - confiança",
+    description:
+      "Quando você trabalha conosco, pode ter a certeza de que estará em boas mãos. Nós criamos soluções tecnológicas de qualidade, que vão além das suas expectativas.",
   },
   {
-    colorImage: '/images/colors/blue.svg',
-    name: '#9297CB',
+    name: "#EE7036",
+    title: "Laranja - energia",
+    description:
+      "Estamos sempre animados e empolgados com o que fazemos. Juntos, podemos transformar sua ideia em um aplicativo incrível!",
   },
   {
-    colorImage: '/images/colors/orange.svg',
-    name: '#EE7036',
+    name: "#F7CB9A",
+    title: "Amarelo - criatividade",
+    description:
+      "Somos especialistas em criar soluções personalizadas que atendem às suas necessidades. Trabalhamos com a mais alta qualidade, e nossos produtos são verdadeiras obras-primas.",
   },
   {
-    colorImage: '/images/colors/yellow.svg',
-    name: '#F7CB9A',
+    name: "#F6C1A7",
+    title: "Salmão - elegância",
+    description:
+      "Cada detalhe é pensado com cuidado, para que possamos entregar o melhor resultado possível. Somos sofisticados e elegantes em tudo o que fazemos.",
   },
   {
-    colorImage: '/images/colors/salmon.svg',
-    name: '#F6C1A7',
+    name: "#B6C796",
+    title: "Verde - prosperidade",
+    description:
+      "Trabalhando conosco, você pode crescer e alcançar novos patamares no mundo da tecnologia. Nós estamos aqui para ajudá-lo a prosperar e evoluir em seu negócio. Juntos, podemos alcançar o sucesso. Venha fazer parte da nossa revolução tecnológica!",
   },
-]
+];
 ---
 
-<Layout title='Identidade'>
+<Layout title="Identidade">
   <Header client:load />
-  {colore.map((item) => <ColorContainer name={item.name} />)}
+  <main class="container p-10 grid grid-cols-1 md:grid-cols-2 place-items-center">
+    <img src="/images/logo.svg" alt="Revo logo" class="w-11/12  ">
+    <Card>
+      <p>
+        O nome REVO é uma abreviação para "revolução", e simboliza a
+        transformação que a empresa busca trazer através da tecnologia. O ícone
+        de nuvem representa a abordagem moderna e inovadora da empresa, que
+        possibilita o acesso remoto e a facilidade de uso das soluções
+        tecnológicas oferecidas. A REVO está pronta para criar um mundo de
+        possibilidades junto com você. Venha fazer parte da nossa revolução
+        tecnológica!
+      </p>
+    </Card>
+  </main>
+  <div class="bg-darkBlue">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 place-items-center justify-items-center">
+        <Card>
+          <div class="min-h-[20px]"></div>
+          <h2>Conheça nossas cores</h2>
+          <p class="text-center">Nossa identidade visual é composta por cinco cores incríveis: o azul, o laranja, o amarelo, o salmão e o verde. Cada uma delas transmite uma mensagem única que reflete nossa abordagem moderna e inovadora.</p>
+        </Card>
+        {
+          colore.map((item) => (
+            <ColorContainer
+              name={item.name}
+              description={item.description}
+              title={item.title}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
 </Layout>
