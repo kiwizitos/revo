@@ -1,8 +1,13 @@
 ---
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Nossos serviços">
   <Header client:load />
+  <main class="container">
+    <p>Nós somos uma consultoria especializada em desenvolvimento de aplicativos para celulares, criando soluções personalizadas para o seu negócio. Oferecemos uma equipe de especialistas em todas as etapas do processo, desde o planejamento até o lançamento e manutenção contínua. Com os nossos aplicativos, os usuários terão uma experiência única e inesquecível. Se você quer se destacar no mercado de aplicativos, estamos aqui para ajudá-lo. Preencha o nosso formulário de contato e descubra como podemos transformar a sua ideia em um aplicativo incrível!</p>
+  </main>
+  <Footer />
 </Layout>

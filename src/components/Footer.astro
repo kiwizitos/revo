@@ -1,0 +1,27 @@
+---
+import GithubIcon from './icons/GithubIcon.astro'
+import InstagramIcon from './icons/InstagramIcon.astro'
+---
+
+<footer class='bg-darkBlue text-white'>
+  <div class='max-w-7xl mx-auto py-6 px-4 overflow-hidden sm:px-6 lg:px-8'>
+    <div class='flex flex-col items-center md:grid grid-cols-2'>
+      <div>
+        <p>© 2022 Revo. Todos os direitos reservados.</p>
+      </div>
+      <div>
+        <p class='text-end'>Nos siga nas redes sociais:</p>
+        <div class='flex mt-2 justify-center md:justify-end'>
+          <a href='https://www.instagram.com/meuinstagram'>
+            <span class='sr-only'>Instagram</span>
+            <InstagramIcon />
+          </a>
+          <a href='https://github.com/kiwizitos/revo'>
+            <span class='sr-only'>GitHub</span>
+            <GithubIcon />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

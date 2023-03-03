@@ -1,57 +1,70 @@
 ---
-import Card from "../components/Card.astro";
-import MemberContainer from "../components/container/MemberContainer.astro";
-import Header from "../components/Header";
-import Layout from "../layouts/Layout.astro";
+import Card from '../components/Card.astro'
+import MemberContainer from '../components/container/MemberContainer.astro'
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header'
+import Layout from '../layouts/Layout.astro'
 
 const members = [
   {
-    name: "Matheus",
-    role: "Leader",
-    image: "/images/members/Matheus.svg",
-    url: "https://github.com/kiwizitos",
+    name: 'Matheus',
+    role: 'Líder',
+    image: '/images/members/Matheus.svg',
+    url: 'https://github.com/kiwizitos',
   },
   {
-    name: "Yasmim",
-    role: "Redatora",
-    image: "/images/members/default.png",
+    name: 'Yasmim',
+    role: 'Redatora',
+    image: '/images/members/default.png',
   },
   {
-    name: "Fabíola",
-    role: "Redatora",
-    image: "/images/members/default.png",
+    name: 'Fabíola',
+    role: 'Redatora',
+    image: '/images/members/default.png',
   },
   {
-    name: "Laura",
-    role: "Backend",
-    image: "/images/members/default.png",
+    name: 'Laura',
+    role: 'Backend',
+    image: '/images/members/default.png',
   },
-];
+]
 ---
 
-<Layout title="Equipe">
+<Layout title='Equipe'>
   <Header client:load />
-  <div class="flex flex-col items-center">
-    <div
-      class="w-1/2 flex flex-col items-center place-items-center md:grid grid-cols-2 grid-rows-2 gap-4"
-    >
-      {
-        members.map((item) => (
-          <MemberContainer
-            name={item.name}
-            role={item.role}
-            image={item.image}
-            url={item.url}
-          />
-        ))
-      }
+    <div class='flex flex-col items-center m-4'>
+      <div class='w-3/4 text-center'>
+        <Card>
+          <h2>Conheça a nossa equipe</h2>
+          <p>
+            Temos um time apaixonado por tecnologia e sempre em busca de
+            soluções inovadoras para nossos clientes. Com anos de experiência em
+            desenvolvimento de aplicativos, estamos atualizados com as últimas
+            tendências do mercado.
+          </p>
+          <p>
+            Cada membro tem sua especialidade em design, desenvolvimento de
+            software, testes ou gerenciamento de projetos. Compartilhamos a
+            paixão por criar aplicativos incríveis que transformam vidas e
+            negócios.
+          </p>
+        </Card>
+      </div>
+      <div
+        class='w-1/2 flex flex-col items-center place-items-center md:grid grid-cols-2 grid-rows-2 gap-4'
+      >
+        {
+          members.map((item) => (
+            <MemberContainer
+              name={item.name}
+              role={item.role}
+              image={item.image}
+              url={item.url}
+            />
+          ))
+        }
+      </div>
+    
     </div>
-    <Card>
-      <h2>Somos a Revo</h2>
-      <p>
-        Uma consultoria de Tecnologia com foco na criação de aplicação e
-        sistemas para plataformas mobile.
-      </p>
-    </Card>
-  </div>
 </Layout>
+<Footer />
